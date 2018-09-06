@@ -63,7 +63,7 @@ class Extraction(Mathematical):
 
 
 
-class User:
+class User:--Kullanıcımıza ait sınıf--
 
     def __init__(self,operation,sayi1,sayi2):
         self.operation=operation
@@ -74,6 +74,7 @@ class User:
 
 
     def DoTheOperation(self):
+    --Burdaki metotta yapıcı metottan enjekte edilen operation nesnesinin OperationofMath metodunu döndürüyoruz.Bu metotun içindeki metot aynı zamanda genel matematik operasyon işlemlerini gerçekleştiren sınıfın metotudur ve bu vesileyle miras verdiği sınıflarda OperationofMath metotunu kullanabiliyor.--
         return self.operation.OperationofMath()
 
 
@@ -82,17 +83,17 @@ class User:
 
 
 
-operation1=Squart(16,4)
+operation1=Squart(16,4) --Karekök sınıfı nesnesi--
 
-operation2=Squart(25,16)
+operation2=Squart(25,16) --Karekök sınıfı nesnesi--
 
-operation3=Factorial(4,5)
+operation3=Factorial(4,5) --Faktöriyel sınıfı nesnesi--
 
-operation4=Sub(4,3)
+operation4=Sub(4,3) --Toplama sınıfı nesnesi--
 
-operation5=Extraction(11,5)
+operation5=Extraction(11,5) --Çıkarma sınıfı nesnesi--
 
-User=User(operation5,operation5.sayi1,operation5.sayi2)
+User=User(operation5,operation5.sayi1,operation5.sayi2) --Kullanıcı sınıfına ait nesne.Yapıcı metotu içinde üç tane değer enjekte edildiği ya da üç tane parametre konduğu için nesneyi oluştururken de parantez içinde üç tane değer aldı.Biri operasyon nesnesi ve diğer ikisi de operasyon nesnesinin sahip olduğu sayi1 ve sayi2 özellikleridir.--
 
 sonuc=User.DoTheOperation()
 
